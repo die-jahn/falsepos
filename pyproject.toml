@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "die-jahn-falsepos"
+version = "0.1.0"
+description = "统计误报率并对误报样本做模式归类，找出常见触发原因"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "die-jahn" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://die-jahn.github.io"
+Repository = "https://github.com/die-jahn/falsepos"
+Issues = "https://github.com/die-jahn/falsepos/issues"
+
+[project.scripts]
+falsepos = "falsepos:main"
+
+[tool.setuptools]
+py-modules = ["falsepos"]
